@@ -1,0 +1,18 @@
+[
+  {
+    "id": "b8eaa441-9503-47c6-9907-d682f7632d8e",
+    "name": "Son 23",
+    "email": "test@gmail.com",
+    "phone": "0912456789",
+    "gender": "Female",
+    "password": "123456"
+  },
+  {
+    "id": "4314626e1467ef203edca44d703965f4",
+    "name": "Bao",
+    "email": "buitragiabao2016@gmail.com",
+    "phone": "0855454911",
+    "gender": "Male",
+    "password": "123456"
+  }
+]
