@@ -16,7 +16,6 @@ export default function UserManagement() {
 
   return (
     <>
-      <Header />
       <div className="p-4">
         <h1 className="text-2xl font-bold mb-4 text-center">User Management</h1>
         <div className="flex justify-end my-6">

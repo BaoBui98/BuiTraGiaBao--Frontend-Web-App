@@ -4,7 +4,7 @@ import "./globals.css";
 import Providers from "@/common/providers";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "@/components/Header";
+import CustomLayout from "@/components/CustomLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,20 +21,21 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-         
-            {children}         
-          <ToastContainer
-            position="top-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="light"
-          />
+          <CustomLayout>
+            {children}
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+            />
+          </CustomLayout>
         </Providers>
       </body>
     </html>
