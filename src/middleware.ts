@@ -6,7 +6,7 @@ import { ROUTER_PAGE } from "./constant/router-page";
 export function middleware(req: NextRequest) {
   const accessToken = req.cookies.get(ACCESS_TOKEN);
 
-  const loginPath = ROUTER_PAGE.LOGIN;
+  const loginPath = "/login";
 
   if (!accessToken) {
     return NextResponse.redirect(new URL(loginPath, req.url));
@@ -16,5 +16,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: [ROUTER_PAGE.USER],
+  matcher: ["/"],
 };
