@@ -9,6 +9,7 @@ import { Avatar, Button, Popover, Typography } from "@mui/material";
 import { deepPurple } from "@mui/material/colors";
 import { removeCookie } from "@/ultils/cookies";
 import { useRouter } from "next/navigation";
+import { ROUTER_PAGE } from "@/constant/router-page";
 
 export default function Header() {
   const [currentUser, setCurrentUser] = useState<UserProps | null>(null);
@@ -36,7 +37,7 @@ export default function Header() {
   const handleLogout = () => {
     removeFromStorage(USER);
     removeCookie(ACCESS_TOKEN);
-    router.push("/login");
+    router.push(ROUTER_PAGE.LOGIN);
     setCurrentUser(null);
   };
 

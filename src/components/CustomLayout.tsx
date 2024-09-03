@@ -2,6 +2,7 @@
 import React from "react";
 import Header from "./Header";
 import { usePathname } from "next/navigation";
+import { ROUTER_PAGE } from "@/constant/router-page";
 
 export default function CustomLayout({
   children,
@@ -11,7 +12,9 @@ export default function CustomLayout({
   const pathName = usePathname();
   return (
     <>
-      {pathName !== "/login" && pathName !== "/register" && <Header />}
+      {pathName !== ROUTER_PAGE.LOGIN && pathName !== ROUTER_PAGE.REGISTER && (
+        <Header />
+      )}
       {children}
     </>
   );
